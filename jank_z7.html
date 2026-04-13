@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z7_html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: justify;
+            margin: 4px 0 8px 0;
+        }
+        table.ramka {
+            border-collapse: collapse;
+            margin: 6px 0 4px 0;
+        }
+        table.ramka td {
+            border: 1px solid #000;
+            padding: 7px 14px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+        table.kod td {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12px;
+            white-space: pre;
+        }
+        ol {
+            padding-left: 22px;
+        }
+        ol > li {
+            margin-bottom: 16px;
+        }
+        .lub {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <p><b>Styl wpisany (styl lokalny, liniowy, linijkowy)&rarr;Dopisanie arkusza do wybranego bloku.</b></p>
+
+    <ol>
+        <li>
+            <h1>Na co pozwala styl lokalny, który element będzie formatowany z użyciem stylu lokalnego?</h1>
+            <p>
+                <b>Styl lokalny</b> pozwala na nadanie formatowania konkretnemu pojedynczemu elementowi
+                strony. Jest wstawiany w tej samej linii, w której znajduje się element formatowany.
+                O tym, który to będzie element, decyduje słowo kluczowe &bdquo;selektor&rdquo;.
+            </p>
+        </li>
+
+        <li>
+            <h1>Składnia teoretyczna:</h1>
+            <table class="ramka">
+                <tr>
+                    <td>&lt;selektor&nbsp;style=&quot;cecha1:&nbsp;wartość1;&nbsp;cecha2:&nbsp;wartość2...&quot;&gt;...&lt;/selektor&gt;</td>
+                </tr>
+            </table>
+            <p class="lub">lub inaczej</p>
+            <table class="ramka">
+                <tr>
+                    <td>&lt;selektor&nbsp;style=&quot;nasze&nbsp;style&quot;&gt;treść&nbsp;bloku&lt;/selektor&gt;</td>
+                </tr>
+            </table>
+            <p>
+                Znaki specjalne &amp;lt; i &amp;gt; zastępują &lt; i &gt; tak, aby instrukcja CSS
+                wewnątrz ramki tylko się wyświetlała, a nie wykonywała.
+                Przykład znaku specjalnego: <b>&amp;nbsp;</b> &ndash; spacja nielamana
+                (&bdquo;przykład znaku specjalnego&rdquo;).
+            </p>
+        </li>
+
+        <li>
+            <h1>Co może być selektorem?</h1>
+            <p>
+                <b>Selektorem</b> może być praktycznie dowolny znacznik, np. p (akapit), h1 (nagłówek),
+                td (komórka tabeli) i inne. To właśnie elementom znajdującym się pomiędzy tymi
+                znacznikami, nadajemy atrybuty formatowania.
+            </p>
+        </li>
+
+        <li>
+            <h1>Co wypisujemy jako &bdquo;cechę&rdquo;? Jakie jest znaczenie średników?</h1>
+            <p>
+                Jako <b>&bdquo;cechę&rdquo;</b> czy inaczej własność bądź właściwość
+                (ang. &bdquo;property&rdquo;) należy wpisać o jakie konkretnie atrybuty
+                formatowania nam chodzi (np. kolor tekstu &ndash; color).<br>
+                Jednemu selektorowi możemy nadać kilka atrybutów (cech). Są one wtedy
+                rozdzielone <b>średnikami</b>.
+            </p>
+        </li>
+
+        <li>
+            <h1>Co wypisujemy jako &bdquo;wartość&rdquo; (w deklaracji stylu)?</h1>
+            <p>
+                Jako wyraz <b>&bdquo;wartość&rdquo;</b> (w deklaracji stylu) wpiszemy dokładną wartość
+                atrybutu (np. dla koloru tekstu będzie to: red, blue czy też #31F4A5 itd.).
+                Wartość zależy ściśle od cechy, po której stoi w deklaracji.
+                Opis wszystkich cech później.
+            </p>
+        </li>
+    </ol>
+
+    <p><b>Przykład:</b></p>
+    <table class="ramka">
+        <tr>
+            <td>&lt;p&nbsp;style=&quot;color:&nbsp;red&quot;&gt;To&nbsp;jest&nbsp;kolor&nbsp;tekstu&nbsp;na&nbsp;czerwono&lt;/p&gt;</td>
+        </tr>
+    </table>
+
+    <p>
+        <b>Uwaga:</b><br>
+        <u>Styl wpisany jest wprowadzony w wybranym znaczniku i <b>nie ma</b> wpływu na pozostałe
+        znaczniki.</u>
+    </p>
+
+    <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; margin-top: 14px;">
+        <tr>
+            <td style="font-family: 'Courier New', monospace; font-size: 12px; white-space: pre;">&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;stylwpisany&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;!--&nbsp; stylwpisany &nbsp;&nbsp;&nbsp; --&gt;
+&lt;/head&gt;
+&lt;body bgcolor=&quot;red&quot;&gt;
+&lt;p style=&quot;font-family: Arial, Helvetica, sans-serif; font-size: 40px;&quot;&gt;
+styl wpisany wielkość 40 pikseli&lt;/p&gt;
+&lt;p&gt;styl wpisany wielości standardowej z użyciem znacznika --&gt;&lt;/p&gt;
+&lt;p&gt;styl wpisany wielości standardowa z użyciem znacznika --&gt;&lt;/p&gt;
+&lt;span style=&quot;font-family: Arial, Helvetica, sans-serif; font-size: 25px;&quot;&gt;
+styl wpisany wielkość 25 pikseli&lt;/span&gt;&lt;br&gt;
+&lt;span&gt;styl wpisany wielkością standardową--&gt;&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</td>
+        </tr>
+    </table>
+
+<!-- Jankowski Z7_html -->
+</body>
+</html>
