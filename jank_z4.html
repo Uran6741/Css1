@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z4_html</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        h3 {
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 4px;
+        }
+        p, li {
+            text-align: justify;
+        }
+        textarea {
+            width: 96%;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 13px;
+            border: 1px solid #000;
+            padding: 6px;
+            background-color: #f9f9f9;
+            resize: none;
+            display: block;
+            margin: 6px 0 14px 0;
+        }
+        ol li {
+            margin-bottom: 6px;
+        }
+        .arrow {
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sposoby podłączania styli do strony (skrócone zestawienie).</h2>
+
+    <h3>1) <u>Zewnętrzny</u> arkusz stylów.</h3>
+    <textarea rows="4" readonly>
+&lt;head&gt;
+    &lt;link rel="Stylesheet" type="text/css" href="style.css" /&gt;
+&lt;/head&gt;</textarea>
+
+    <h3>2) <u>Styl lokalny</u> inaczej: (styl wpisany, liniowy, linijkowy, w linii) czyli<br>
+    dopisanie arkusza do wybranego bloku treści strony.</h3>
+    <textarea rows="2" readonly>
+&lt;selektor style="cecha1: wartość1; cecha2: wartość2..."&gt;...&lt;/selektor&gt;</textarea>
+
+    <h3>3) <u>Wewnętrzny</u> arkusz stylów.</h3>
+    <textarea rows="7" readonly>
+&lt;head&gt;
+  &lt;style type="text/css"&gt;
+    selektor1 { cecha: wartość; cecha2: wartość2... }
+    selektor2 { cecha: wartość; cecha2: wartość2... }
+  &lt;/style&gt;
+&lt;/head&gt;</textarea>
+
+    <h3>4) <u>Alternatywny</u> arkusz stylów.</h3>
+    <textarea rows="6" readonly>
+&lt;head&gt;
+    &lt;link rel="Stylesheet"          type="text/css" href="style.css"  title="Nazwa domyślna" /&gt;
+    &lt;link rel="Alternate stylesheet" type="text/css" href="style1.css" title="Nazwa 1" /&gt;
+    &lt;link rel="Alternate stylesheet" type="text/css" href="style2.css" title="Nazwa 2" /&gt;
+&lt;/head&gt;</textarea>
+
+    <h3>5) <u>Import</u> arkusza stylów.</h3>
+    <textarea rows="4" readonly>
+&lt;style type="text/css"&gt;
+    @import url(adres zewnętrznego arkusza stylów);
+&lt;/style&gt;</textarea>
+
+    <h2>Kaskadowość stylów</h2>
+
+    <p>
+        <b>Kaskadowość stylów</b> określa pierwszeństwo w oddziaływaniu na te same elementy strony
+        stylów z różnych źródeł (lokalny, zewnętrzny, wewnętrzny itp.). Style tworzą hierarchię
+        tworząc <u><i>kaskadę</i></u> dlatego taka nazwa.
+    </p>
+    <p>
+        Kaskadowość stylów pozwala zatem pracować z kilkoma źródłami stylów,
+        bez obawy o wystąpienie konfliktów.
+    </p>
+
+    <p>Priorytet ważności stylów (pierwszeństwo) wyglądałby tak:</p>
+
+    <ol>
+        <li>Styl lokalny, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow">&rarr; najważniejszy</span></li>
+        <li>Rozciąganie stylu (SPAN),</li>
+        <li>Wydzielone bloki (DIV),</li>
+        <li>Wewnętrzny arkusz stylów,</li>
+        <li>Zewnętrzny arkusz stylów,</li>
+        <li>Import arkusza stylów,</li>
+        <li>Domyślne ustawienia przeglądarki &nbsp;&nbsp;<span class="arrow">&rarr; najmniej ważny</span></li>
+    </ol>
+
+<!-- Jankowski Z4_html -->
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z12_html</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 6px;
+        }
+        a {
+            color: blue;
+            font-size: 14px;
+        }
+        .main-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 14px;
+        }
+        .main-table td {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            vertical-align: top;
+        }
+        .header-cell {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .section-title {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 20px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .section-label {
+            font-weight: bold;
+            text-decoration: underline;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .sub-label {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        p { margin: 4px 0; }
+        ul { margin: 4px 0 4px 20px; padding: 0; }
+        ul li { margin-bottom: 3px; }
+    </style>
+</head>
+<body>
+
+    <h2>Temat: Podaj jednostki miar stosowanych w CSS.</h2>
+    <a href="#">Kliknij aby przeczytać o jednostkach miar</a>
+
+    <table class="main-table">
+
+        <!-- HEADER -->
+        <tr>
+            <td class="header-cell">Jednostki miar.</td>
+        </tr>
+
+        <!-- SEKCJA 1: Zastosowanie jednostek bezwzględnych -->
+        <tr>
+            <td>
+                <span class="section-label">Zastosowanie:</span>
+                <span class="section-title">Jednostki bezwzględne</span>
+                (np. cm, mm, in, pt) są używane, gdy zależy Ci na dokładnych wymiarach
+                na wydruku, niezależnie od rozdzielczości urządzenia (ekranu).
+            </td>
+        </tr>
+
+        <!-- SEKCJA 2: Lista jednostek bezwzględnych -->
+        <tr>
+            <td>
+                <span class="sub-label">Jednostki miar bezwzględnych w CSS</span><br>
+                <b>px</b> (piksel): Najczęściej używana jednostka na ekranie, 1px = 1/96 cala.<br>
+                <b>cm</b> (centymetr): 1 cm = 2.54 cm = 96px.<br>
+                <b>mm</b> (milimetr): 1 mm = 1/10 cm<br>
+                <b>in</b> (cal): 1 cal = 2.54 cm = 96px.<br>
+                <b>pt</b> (punkt): 1 punkt = 1/72 cala<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;(często w typografii &rarr; sztuka i technika projektowania, układania
+                i komponowania tekstu tak, by był czytelny, estetyczny).<br>
+                <b>pc</b> (pica): 1 pica = 12 punktów.<br>
+                <b>Q</b> (ćwierć milimetra): 1Q = 1/40 cm (nowa jednostka w CSS3).
+            </td>
+        </tr>
+
+        <!-- SEKCJA 3: Zastosowanie jednostek względnych -->
+        <tr>
+            <td>
+                <span class="section-label">Zastosowanie:</span>
+                <span class="section-title">Jednostki miar względnych w CSS</span>
+                a)Responsywność: Dzięki nim elementy elastycznie dostosowują się do różnych rozmiarów
+                ekranów, co jest podstawą projektowania dla wielu urządzeń.<br>
+                b)Skalowalność: rem i em ułatwiają zmianę rozmiaru tekstu i elementów w całym projekcie
+                poprzez modyfikację tylko jednej wartości bazowej.<br>
+                c)Układ: vw, vh, vmin, vmax pozwalają tworzyć układy, które reagują na dynamiczne
+                zmiany rozmiaru okna, np. pełnoekranowe sekcje.
+            </td>
+        </tr>
+
+        <!-- SEKCJA 4: Lista jednostek względnych -->
+        <tr>
+            <td>
+                <span class="sub-label">Jednostki miar względnych w CSS</span><br>
+                <b><u>a)Jednostki względem rozmiaru czcionki</u></b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>em</b>: Względne do rozmiaru czcionki bieżącego elementu lub jego rodzica.
+                Dobre do skalowania elementów wewnątrz bloku.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>rem</b> (Root em): Względne do rozmiaru czcionki elementu głównego
+                (&lt;html&gt;). Zapewnia spójne skalowanie całej strony.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>ex</b>: Względne do wysokości małej litery 'x' w bieżącej czcionce.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>ch</b>: Względne do szerokości cyfry '0' w bieżącej czcionce.<br>
+                <b><u>b)Jednostki względem okna przeglądarki (Viewport)</u></b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>vw</b> (Viewport Width): 1% szerokości okna przeglądarki.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>vh</b> (Viewport Height): 1% wysokości okna przeglądarki.
+                Idealne do elementów zajmujących całą wysokość ekranu.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>vmin</b>: 1% mniejszego wymiaru (szerokości lub wysokości) okna przeglądarki.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>vmax</b>: 1% większego wymiaru (szerokości lub wysokości) okna przeglądarki.<br>
+                <b><u>c)Inne jednostki względne</u></b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<b>%</b> (Procent): Względne do rozmiaru elementu nadrzędnego (kontenera).
+            </td>
+        </tr>
+
+    </table>
+
+<!-- Jankowski Z12_html -->
+</body>
+</html>

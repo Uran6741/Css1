@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z10_html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: justify;
+            margin: 4px 0 8px 0;
+        }
+        table.ramka {
+            border-collapse: collapse;
+            margin: 6px 0 8px 0;
+        }
+        table.ramka td {
+            border: 1px solid #000;
+            padding: 7px 14px;
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        ol { padding-left: 22px; }
+        ol > li { margin-bottom: 16px; }
+        ul { margin: 4px 0; padding-left: 20px; }
+        ul li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>
+            <h1>Wymienić oraz opisz dwie części selektora:</h1>
+            <p>Reguła CSS składa się z dwóch głównych części:</p>
+            <ul>
+                <li>
+                    <b>Selektor</b> &ndash; wskazuje element (lub elementy) HTML, któremu mają być
+                    nadane style. Przykłady: <b>p</b> (wszystkie akapity), <b>h1</b> (nagłówki h1),
+                    <b>.klasa</b> (elementy z daną klasą), <b>#id</b> (element z danym identyfikatorem).
+                </li>
+                <li>
+                    <b>Blok deklaracji</b> &ndash; zawarty w nawiasach klamrowych <b>{ }</b>,
+                    zawiera jedną lub więcej deklaracji (par właściwość: wartość),
+                    które określają sposób formatowania wskazanego elementu.
+                </li>
+            </ul>
+            <table class="ramka"><tr><td>selektor&nbsp;{&nbsp;właściwość:&nbsp;wartość;&nbsp;}</td></tr></table>
+        </li>
+
+        <li>
+            <h1>Znaczenie nawiasów klamrowych {...}:</h1>
+            <p>
+                Nawiasy klamrowe <b>{ }</b> stanowią <b>blok deklaracji</b> w regule CSS.
+                Zawierają wszystkie deklaracje (pary właściwość: wartość) przypisane do danego selektora.<br>
+                &bull; Otwierający nawias <b>{</b> &ndash; otwiera blok deklaracji.<br>
+                &bull; Zamykający nawias <b>}</b> &ndash; kończy blok deklaracji.<br>
+                Bez nawiasów klamrowych przeglądarka nie wie, które deklaracje
+                należą do danego selektora i nie zastosuje stylów.
+            </p>
+            <table class="ramka"><tr><td>
+                p&nbsp;{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;14px;<br>
+                }
+            </td></tr></table>
+        </li>
+
+        <li>
+            <h1>Opisz cechę:</h1>
+            <p>
+                <b>Cecha</b> (właściwość, ang. <i>property</i>) to pierwsza część deklaracji CSS.
+                Określa <b>co</b> chcemy zmienić w wyglądzie elementu.
+                Cechę oddzielamy od wartości <b>dwukropkiem (:)</b>.
+            </p>
+            <p>Przykłady cech:</p>
+            <ul>
+                <li><b>color</b> &ndash; kolor tekstu</li>
+                <li><b>font-size</b> &ndash; rozmiar czcionki</li>
+                <li><b>background-color</b> &ndash; kolor tła</li>
+                <li><b>font-family</b> &ndash; krój czcionki</li>
+                <li><b>text-align</b> &ndash; wyrównanie tekstu</li>
+                <li><b>border</b> &ndash; obramowanie elementu</li>
+            </ul>
+        </li>
+
+        <li>
+            <h1>Opisz wartości:</h1>
+            <p>
+                <b>Wartość</b> (ang. <i>value</i>) to druga część deklaracji CSS.
+                Określa <b>jak</b> ma wyglądać element &ndash; konkretna wartość przypisana do cechy.
+                Wartość zapisujemy po dwukropku, a kończymy <b>średnikiem (;)</b>.
+            </p>
+            <p>Przykłady wartości:</p>
+            <ul>
+                <li>dla <b>color</b>: <b>red</b>, <b>#FF0000</b>, <b>rgb(255,0,0)</b></li>
+                <li>dla <b>font-size</b>: <b>14px</b>, <b>12pt</b>, <b>1em</b>, <b>16mm</b></li>
+                <li>dla <b>font-family</b>: <b>Arial</b>, <b>"Times New Roman"</b></li>
+                <li>dla <b>text-align</b>: <b>left</b>, <b>center</b>, <b>right</b>, <b>justify</b></li>
+                <li>dla <b>background-color</b>: <b>yellow</b>, <b>#FFFF00</b></li>
+            </ul>
+        </li>
+
+        <li>
+            <h1>Kiedy stosujemy znak średnika (;), kiedy nie jest konieczny:</h1>
+            <p>
+                <b>Średnik (;)</b> stosujemy do <b>oddzielania deklaracji</b> od siebie
+                wewnątrz bloku klamrowego.<br>
+                Po <b>ostatniej</b> deklaracji w bloku średnik <b>nie jest konieczny</b>,
+                jednak zaleca się jego stosowanie &ndash; ułatwia późniejsze dodawanie
+                nowych właściwości i zapobiega błędom.
+            </p>
+            <table class="ramka"><tr><td>
+                p&nbsp;{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;red;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;←&nbsp;średnik&nbsp;wymagany<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size:&nbsp;14px;&nbsp;&nbsp;&nbsp;←&nbsp;średnik&nbsp;opcjonalny&nbsp;(ostatnia&nbsp;deklaracja)<br>
+                }
+            </td></tr></table>
+        </li>
+    </ol>
+
+<!-- Jankowski Z10_html -->
+</body>
+</html>

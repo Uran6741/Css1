@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z3_html</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        p, li {
+            text-align: justify;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 6px 10px;
+            font-weight: bold;
+        }
+        td {
+            padding: 8px 12px;
+            vertical-align: top;
+        }
+        .table-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px;
+        }
+        ol li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cechy modyfikowania formatowania w HTML oraz CSS (tabela).</h2>
+
+    <table>
+        <tr>
+            <td colspan="2" class="table-title">Cechy modyfikowania formatowania w:</td>
+        </tr>
+        <tr>
+            <th>w HTML</th>
+            <th>w CSS</th>
+        </tr>
+        <tr>
+            <td>
+                modyfikacja wyglądu elementów strony jest bardzo <b>żmudna</b>
+                (atrybuty i znaczniki które za to odpowiadają, są porozrzucane
+                w różnych miejscach kodu, mieszając się ze strukturą dokumentu).
+            </td>
+            <td>
+                rozdzielenie <b>struktury i prezentacji</b> dokumentów czyli:
+                wszystkie polecenia dotyczące formatowania można umieścić w jednym
+                miejscu (tzw. arkuszu) i powiązać je z konkretnymi elementami,
+                wstawionymi za pomocą czystego (X)HTML. Taki sposób sprawia,
+                że modyfikacja wyglądu stron może przebiegać dużo sprawniej.
+            </td>
+        </tr>
+    </table>
+
+    <h2>Nowe możliwości CSS</h2>
+
+    <ol>
+        <li>
+            <b>Przestarzałe atrybuty i znaczniki</b>, znajdujące się bezpośrednio w składni HTML,
+            które dotyczą formatowania (elementy <b>zdeprecjonowane</b>), będą stopniowo wycofywane
+            przez producentów przeglądarek internetowych, na rzecz rekomendowanych analogicznych
+            deklaracji CSS.
+        </li>
+        <li>
+            Dokumenty pisane z wykorzystaniem arkuszy stylów są zwykle bardziej <b>przejrzyste i krótsze</b>.
+        </li>
+        <li>
+            Style pozwalają w <b>łatwy sposób zarządzać</b> całą serią dokumentów,
+            poprzez stosowanie zewnętrznych arkuszy stylów.
+        </li>
+        <li>
+            Dzięki możliwości stosowania klas selektorów, znacznie oszczędzamy sobie pisania.
+            W <b>jednym miejscu określamy wszystkie atrybuty formatowania</b> (których może być bardzo dużo),
+            odnoszące się do wielu elementów, które mają wyglądać tak samo. Bezpośrednio przy elemencie
+            wystarczy podać tylko nazwę klasy i nie musimy już wypisywać dużej ilości poleceń.
+            Znacznie przyspiesza to późniejszą modyfikację strony, ponieważ zmian dokonujemy tylko
+            w jednym miejscu, a wpływają one na wiele elementów jednocześnie.
+        </li>
+        <li>
+            Możliwość <b>stosowania różnorodnych jednostek oraz sposobów definiowania kolorów</b>.
+        </li>
+        <li>
+            Różne wartości <b>pogrubienia czcionki</b> (9 rodzajów).
+        </li>
+        <li>
+            <b>Dodatkowe możliwości formatowania tekstu</b>.
+        </li>
+        <li>
+            <b>Efektowne filtry graficzne</b>.
+        </li>
+        <li>
+            Dodatkowe możliwości <b>określenia wyglądu dokumentów podczas ich drukowania</b>.
+        </li>
+    </ol>
+
+    <h2>Wady CSS</h2>
+
+    <ol>
+        <li>
+            <b>Różna interpretacja przez przeglądarki</b> &ndash; ten sam kod CSS może być różnie
+            wyświetlany w różnych przeglądarkach internetowych, co wymaga dodatkowych poprawek.
+        </li>
+        <li>
+            <b>Problemy ze zgodnością wsteczną</b> &ndash; starsze przeglądarki mogą nie obsługiwać
+            nowszych właściwości CSS, co może powodować nieprawidłowe wyświetlanie stron.
+        </li>
+        <li>
+            <b>Złożoność dziedziczenia</b> &ndash; nieoczekiwane dziedziczenie stylów przez elementy
+            podrzędne może powodować trudne do wykrycia błędy formatowania.
+        </li>
+        <li>
+            <b>Brak dynamicznych możliwości</b> &ndash; CSS jest językiem statycznym i nie pozwala
+            samodzielnie tworzyć dynamicznych efektów bez wsparcia języka JavaScript.
+        </li>
+        <li>
+            <b>Trudności z układem wielokolumnowym</b> &ndash; tworzenie zaawansowanych układów
+            strony może być skomplikowane, szczególnie przy zachowaniu zgodności z różnymi urządzeniami.
+        </li>
+    </ol>
+
+<!-- Jankowski Z3_html -->
+</body>
+</html>

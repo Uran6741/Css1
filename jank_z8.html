@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jankowski Z8_html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            margin: 30px 60px;
+            color: #000;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            text-align: justify;
+            margin: 4px 0 8px 0;
+        }
+        table.ramka {
+            border-collapse: collapse;
+            margin: 6px 0 8px 0;
+        }
+        table.ramka td {
+            border: 1px solid #000;
+            padding: 8px 16px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+        ol { padding-left: 22px; }
+        ol > li { margin-bottom: 16px; }
+        ul { margin: 4px 0; padding-left: 20px; }
+        ul li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+    <ol>
+        <li>
+            <h1>Gdzie jest wstawiany?</h1>
+            <p>
+                Wewnętrzny arkusz stylów jest wstawiany w sekcji <b>&lt;head&gt;</b> dokumentu HTML,
+                pomiędzy znacznikami <b>&lt;head&gt;</b> a <b>&lt;/head&gt;</b>.
+                Do jego zdefiniowania używamy znacznika <b>&lt;style&gt;</b>
+                z atrybutem <b>type="text/css"</b>.
+                Style w nim zawarte obowiązują dla całego dokumentu HTML,
+                w którym zostały zapisane.
+            </p>
+        </li>
+
+        <li>
+            <h1>Składnia teoretyczna (w ramce, konieczne wcięcia):</h1>
+            <table class="ramka">
+                <tr>
+                    <td>
+                        &lt;head&gt;<br>
+                        &nbsp;&nbsp;&lt;style&nbsp;type="text/css"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selektor1&nbsp;{&nbsp;cecha:&nbsp;wartość;&nbsp;cecha2:&nbsp;wartość2...&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selektor2&nbsp;{&nbsp;cecha:&nbsp;wartość;&nbsp;cecha2:&nbsp;wartość2...&nbsp;}<br>
+                        &nbsp;&nbsp;&lt;/style&gt;<br>
+                        &lt;/head&gt;
+                    </td>
+                </tr>
+            </table>
+        </li>
+
+        <li>
+            <h1>Jakie mogą być selektory?</h1>
+            <p>
+                Selektorem może być praktycznie dowolny znacznik (element) HTML, np.:
+            </p>
+            <ul>
+                <li><b>p</b> &ndash; akapit</li>
+                <li><b>h1, h2, h3...</b> &ndash; nagłówki</li>
+                <li><b>body</b> &ndash; całe ciało dokumentu</li>
+                <li><b>div</b> &ndash; blok</li>
+                <li><b>span</b> &ndash; fragment tekstu inline</li>
+                <li><b>table, td, tr</b> &ndash; elementy tabeli</li>
+                <li><b>a</b> &ndash; odnośnik (link)</li>
+                <li><b>ul, ol, li</b> &ndash; listy i ich elementy</li>
+            </ul>
+            <p>
+                To właśnie elementom znajdującym się pomiędzy znacznikami otwierającym
+                i zamykającym selektora, nadajemy atrybuty formatowania.
+            </p>
+        </li>
+
+        <li>
+            <h1>Jakie mogą być cechy i wartości?</h1>
+            <p>
+                <b>Cechy</b> (właściwości, ang. <i>properties</i>) określają, co chcemy
+                zmienić w wyglądzie elementu. Przykłady cech:
+            </p>
+            <ul>
+                <li><b>color</b> &ndash; kolor tekstu</li>
+                <li><b>font-size</b> &ndash; rozmiar czcionki</li>
+                <li><b>font-family</b> &ndash; krój czcionki</li>
+                <li><b>background-color</b> &ndash; kolor tła</li>
+                <li><b>text-align</b> &ndash; wyrównanie tekstu</li>
+                <li><b>border</b> &ndash; obramowanie</li>
+                <li><b>margin</b> &ndash; zewnętrzny margines</li>
+                <li><b>padding</b> &ndash; wewnętrzny odstęp</li>
+            </ul>
+            <p>
+                <b>Wartości</b> to konkretne wartości przypisane do danej cechy po dwukropku.
+                Przykłady wartości:
+            </p>
+            <ul>
+                <li>dla <b>color</b>: <b>red</b>, <b>#FF0000</b>, <b>rgb(255,0,0)</b></li>
+                <li>dla <b>font-size</b>: <b>14px</b>, <b>12pt</b>, <b>1em</b>, <b>16mm</b></li>
+                <li>dla <b>font-family</b>: <b>Arial</b>, <b>"Times New Roman"</b></li>
+                <li>dla <b>text-align</b>: <b>left</b>, <b>center</b>, <b>right</b>, <b>justify</b></li>
+            </ul>
+        </li>
+    </ol>
+
+<!-- Jankowski Z8_html -->
+</body>
+</html>
