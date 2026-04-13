@@ -2,45 +2,152 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Jankowski Z11_html</title>
+    <title>Jankowski Z11</title>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
+            margin: 8px;
+            line-height: 1.25;
+            font-size: 20px;
+        }
+        h2, h3 {
+            margin: 10px 0 5px 0;
+        }
+        .u {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .ramka {
+            border: 1px solid #000;
+            padding: 2px 8px;
+            margin: 6px 0 10px 0;
+        }
+        .kod {
+            font-family: "Times New Roman", Times, serif;
+            white-space: pre-line;
+        }
+        .blok {
+            margin-bottom: 14px;
+        }
+        .zielony {
+            color: green;
+        }
+        .demo-dziecko p > span {
+            font-style: italic;
+            text-decoration: underline;
+            color: green;
+        }
+        .demo-rodzenstwo p + span {
+            font-style: italic;
+            text-decoration: underline;
+            color: green;
         }
     </style>
 </head>
 <body>
-    <h1>Rodzaje selektorów</h1>
+    <div class="blok">
+        <div class="u">Rodzaj pierwszy</div>
+        <h2>Selektory proste nazywany inaczej <u>selektor typu</u></h2>
+        <pre class="kod">p
+{
+    color:red;
+    font-size:14pt;
+}</pre>
+        <p><u>Selektorem prostym</u> jest znacznik języka XHTML/HTML (<b>np. p, h3, table, img</b>) przypisany do elementu, który chcesz w danym momencie formatować.</p>
+        <p>Styl zdefiniowany dla przykładowego selektora będzie odnosił się wyłącznie do akapitów zamkniętych w znacznikach &lt;p&gt;&lt;/p&gt; i nie będzie wpływał na pozostałe elementy strony WWW.</p>
+    </div>
 
-    <ol>
-        <li><a href="#">selektor prosty (selektor typu)</a></li>
-        <li><a href="#">selektor uniwersalny</a></li>
-        <li><a href="#">selektor potomka</a></li>
-        <li><a href="#">selektor dziecka</a></li>
-        <li><a href="#">selektor braci</a></li>
-        <li>
-            <a href="#">selektor atrybutu</a>
-            <ol type="a">
-                <li>prosty selektor atrybutu</li>
-                <li>selektor atrybutu o określonej wartości</li>
-                <li>selektor atrybutu zawierający określony wyraz</li>
-            </ol>
-        </li>
-        <li>
-            selektory specjalne
-            <ol type="a">
-                <li>selektor klasy</li>
-                <li>pseudoklasy</li>
-                <li>
-                    selektory pseudoelementów
-                    <ul>
-                        <li>pierwsza linia</li>
-                        <li>pierwsza litera</li>
-                    </ul>
-                </li>
-            </ol>
-        </li>
-    </ol>
+    <div class="blok">
+        <div class="u">Rodzaj drugi</div>
+        <h2>Selektor uniwersalny</h2>
+        <p>Składnia teoretyczna:</p>
+        <div class="ramka">* { cecha: wartość }</div>
+        <p><b>Cecha</b> (ang. property) oraz <b>wartość</b> (ang. value) określają atrybuty elementu.</p>
+        <p>Selektor taki pozwala ustalić określone atrybuty dla wszystkich elementów strony, a więc dla różnych selektorów typu. Możemy za pomocą tej komendy nadać to samo formatowanie dla wszystkich elementów na całej stronie, niezależnie od ich typu (p, h1, li itd.).</p>
+        <p><b>Uwaga1</b><br>Niestety jego działanie nie zawsze jest jednoznaczne, dlatego dużo <u>bezpieczniej jest używać selektora typu dla elementu body</u>, chyba że zastosujemy to polecenie w odniesieniu do klasy selektorów.</p>
+        <p><b>Uwaga2</b><br>Jeśli selektor uniwersalny chcemy zastosować do selektora innego niż selektor typu (w połączeniu z selektorami: atrybutów, specjalnymi, pseudoelementów lub pseudoklas), to gwiazdkę można pominąć.</p>
+    </div>
+
+    <div class="blok">
+        <div class="u">Rodzaj trzeci selektora</div>
+        <h2>Selektor potomka</h2>
+        <p>Przy użyciu <b>selektora potomka</b> można formatować elementy, które są zawarte wewnątrz innych znaczników, czyli leżą niżej w hierarchii drzewa dokumentu.</p>
+        <p>Składnia teoretyczna:</p>
+        <div class="ramka">przodek1 przodek2 ... potomek { cecha: wartość }</div>
+        <p>gdzie;<br><b>"przodek1, przodek2,... "</b> oraz <b>"potomek"</b> (wielokropek należy pominąć!) są selektorami typu, przy czym przodek leży wyżej w hierarchii drzewa dokumentu</p>
+        <p>Natomiast wyrazy <b>"cecha"</b> oraz <b>"wartość"</b> określają atrybuty elementu.</p>
+        <p><u>Selektor potomka pozwala nadać atrybuty elementom, które leżą niżej w hierarchii drzewa dokumentu (zawierają się w innych zewnętrznych znacznikach). Dzięki temu możemy zmienić typ formatowania tylko dla określonych elementów, które są podrzędne w stosunku do innych (przodków).</u> Potomek nie musi leżeć bezpośrednio wewnątrz znacznika przodka. Może być zawarty jeszcze w innych znacznikach, które z kolei zawierają się w rodzicu. Nie jest wtedy konieczne podawanie w deklaracji wszystkich rodziców, a jedynie przodka i potomka.</p>
+        <p>Selektor taki jest szczególnie przydatny, dla określenia wyglądu odsyłaczy wewnątrz bloku, ponieważ jeśli nie określimy dla nich tzw. pseudoklas odsyłaczowych, nie odziedziczą one formatowania po przodkach.</p>
+    </div>
+
+    <div class="blok demo-dziecko">
+        <h2>Selektor dziecka</h2>
+        <p>Selektor dziecka służy do definiowania elementów, które znajdują się o <b>jeden rząd niżej</b> w hierarchii drzewa dokumentów.</p>
+        <div class="ramka">rodzic &gt; dziecko {właściwość: wartość}</div>
+        <p>gdzie symbol „&gt;” oznacza bezpośredni związek między elementami.</p>
+        <p>Przykład opisanego selektora znajduje się poniżej.</p>
+        <div class="ramka kod">p &gt; span
+{
+    font-style:italic;
+    text-decoration:underline;
+    color:green;
+}</div>
+        <p><u>Działanie</u> -> definicji stylu opis:<br>Dany <b>styl zadziała</b> w przypadku, gdy wewnątrz bloku tekstu zostanie umieszczony znacznik &lt;span&gt;&lt;/span&gt;.</p>
+        <p><u>Realizacja:</u></p>
+        <div class="ramka">
+            <p>Dowolny tekst, w którym widać efekt działania <span>selektora dziecka</span>.</p>
+            <span>Tekst zamknięty wewnątrz znacznika span, który nie jest formatowany za pomocą selektora dziecka.</span>
+        </div>
+        <p><u>Działanie</u> -> opis tekstu w ramce powyżej:<br>
+            &lt;span&gt;&lt;/span&gt; jest „dzieckiem”<br>
+            &lt;p&gt;&lt;/p&gt; jest „rodzicem”<br>
+            <u>pierwsza linia</u><br>
+            formatowaniu zostanie poddany tylko tekst znajdujący się wewnątrz znacznika &lt;span&gt;&lt;/span&gt;, który z kolei ograniczony jest przez &lt;p&gt;&lt;/p&gt;,<br>
+            <u>druga linia</u><br>
+            natomiast inne elementy, które nie są „dziećmi” &lt;p&gt;&lt;/p&gt;, pomimo że również zamknięte są w &lt;span&gt;&lt;/span&gt;, pozostaną bez zmian.
+        </p>
+    </div>
+
+    <div class="blok demo-rodzenstwo">
+        <h2>Selektora "rodzeństwa" (braci)</h2>
+        <div class="ramka">brat1 + brat2 {właściwość: wartość}</div>
+        <p><b>Zastosowanie selektora rodzeństwa można przypisać styl elementowi bezpośrednio sąsiadującemu z innym.</b> By warunek został spełniony, <u>oba selektory muszą mieć wspólnego „rodzica”.</u></p>
+        <p>Przykładem takiego selektora jest poniższy listing.<br><u>definicja:</u></p>
+        <div class="ramka kod">p + span
+{
+    font-style:italic;
+    text-decoration:underline;
+    color:green;
+}</div>
+        <p>znaczniki &lt;p&gt; oraz &lt;span&gt; podczas realizacji <b>muszą ze sobą sąsiadować.</b></p>
+        <p><u>realizacja:</u></p>
+        <div class="ramka">
+            <p>To jest tekst akapitu.</p><span>A tutaj działa selektor rodzeństwa.</span>
+            <span>Natomiast ten tekst, pomimo że jest zamknięty w span, już nie jest formatowany, bo nie sąsiaduje bezpośrednio z akapitem.</span>
+        </div>
+        <p>Z powyższego kodu wynika, iż są dwa bloki &lt;span&gt;:<br>
+            <u>pierwszy blok span</u> -> blok tekstu ujęty w &lt;p&gt; sąsiaduje ze znacznikiem &lt;span&gt;, &lt;span&gt; przejmuje formatowanie od &lt;p&gt;,<br>
+            <u>drugi znacznik</u> -> &lt;span&gt; bezpośrednio nie sąsiaduje z &lt;p&gt; i &lt;span&gt; nie przejmuje formatowanie od &lt;p&gt;.
+        </p>
+        <p><u>działanie:</u></p>
+        <div class="ramka">To jest tekst akapitu.<span class="zielony">A tutaj działa selektor rodzeństwa.</span>Natomiast ten tekst, pomimo że jest zamknięty w span, już nie jest formatowany, bo nie sąsiaduje bezpośrednio z akapitem.</div>
+    </div>
+
+    <div class="blok">
+        <h2>Prosty selektor atrybutu</h2>
+        <p>Składnia teoretyczna:</p>
+        <div class="ramka">selektor[atrybut] { cecha: wartość }</div>
+        <p><b>Selektorem</b> może być dowolny znacznik, np. ( p – akapit ), ( h1 – nagłówek ),(td - komórka tabeli).</p>
+        <p><b>Atrybut</b> oznacza konkretny parametr nadany znacznikowi z poziomu języka (X)HTML.</p>
+        <p>Natomiast <b>"cecha" oraz "wartość"</b> określają atrybuty elementu nadane poprzez style i zostaną opisane w dalszych rozdziałach.</p>
+        <p>Polecenie to może zostać wykorzystane dla elementów, którym z poziomu (X)HTML został nadany określony atrybut (przy czym jego wartość nie ma znaczenia).</p>
+        <p><u>uwaga</u><br>W języku XHTML wszystkie atrybuty w selektorach muszą być <u>pisane małymi literami.</u></p>
+        <p><u>Przykład 1 - krótki:</u></p>
+        <div class="ramka">p[title] { color: red }</div>
+        <p>to każdy akapit, któremu został nadany atrybut title="..." , powinien mieć kolor czerwony:</p>
+        <p><u>Przykład 2 - krótki:</u></p>
+        <div class="ramka">p[title][lang] { color: red }</div>
+        <p>Dozwolone jest podanie kilku atrybutów. Wtedy element musi posiadać wszystkie z nich, aby otrzymał formatowanie.</p>
+    </div>
 </body>
 </html>
-<!-- Jankowski Z11_html -->
