@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 24 - Konrad Jankowski</title>
+</head>
+<body>
+    <h1>Zadanie 24 - Właściwości czcionek - teoria</h1>
+    
+    <h1>1. Jakie standardowo dostępne są czcionki w systemie Windows?</h1>
+    <p style="font-family: Arial;">
+        <ul type="square">
+            <li>Arial</li>
+            <li>Times New Roman</li>
+            <li>Courier New</li>
+        </ul>
+    </p>
+    
+    <h1>2. Jakich czcionek dodatkowo dostarcza Internet Explorer?</h1>
+    <p style="font-family: Arial;">
+        <ol type="circle">
+            <li>Verdana</li>
+            <li>Georgia</li>
+            <li>Tahoma</li>
+            <li>Trebuchet MS</li>
+        </ol>
+    </p>
+    
+    <h1>3. Wymień rodziny ogólne</h1>
+    <p style="font-family: Arial;">
+        <ul style="list-style-type: disc; text-decoration: underline;">
+            <li><strong>serif</strong> - czcionki szeryfowe, np. Times New Roman, Georgia</li>
+            <li><strong>sans-serif</strong> - czcionki bezszeryfowe, np. Arial, Verdana</li>
+            <li><strong>monospace</strong> - czcionki o stałej szerokości, np. Courier New, Consolas</li>
+            <li><strong>cursive</strong> - czcionki pisane, np. Comic Sans MS</li>
+            <li><strong>fantasy</strong> - czcionki dekoracyjne, np. Impact</li>
+        </ul>
+    </p>
+    
+    <h1>4. Kiedy stosujemy rodziny czcionek, w jaki sposób wpisujemy (deklarujemy rodziny czcionek)?</h1>
+    <p style="font-family: Arial;">
+        Rodziny czcionek stosujemy, gdy chcemy określić preferowany styl czcionki dla elementu. Deklarujemy je za pomocą właściwości font-family w CSS. Możemy podać kilka nazw czcionek oddzielonych przecinkami - przeglądarka użyje pierwszej dostępnej. Na końcu zawsze podajemy rodzinę ogólną jako fallback.
+    </p>
+    
+    <h1>5. Rodzaje wyrównania tekstu</h1>
+    <p style="font-family: Arial;">
+        <ul>
+            <li>left - wyrównanie do lewej</li>
+            <li>right - wyrównanie do prawej</li>
+            <li>center - centrowanie</li>
+            <li>justify - justowanie (wyrównanie do obu marginesów)</li>
+        </ul>
+    </p>
+    
+    <h1>6. Kolor tekstu (składnia opis)</h1>
+    <p style="font-family: Arial;">
+        Kolor tekstu określamy za pomocą właściwości color w CSS. Można używać różnych formatów: nazwy kolorów (red, blue), kodów szesnastkowych (#FF0000), RGB (rgb(255, 0, 0)), RGBA (rgba(255, 0, 0, 0.5)), HSL, HSLA.
+    </p>
+    
+    <h1>7. Dekoracja tekstu (składnia, opis, odpowiednie wcięcia, podkreślenia numerowania)</h1>
+    <p style="font-family: Arial;">
+        Dekoracja tekstu określa się za pomocą właściwości text-decoration. Możliwe wartości:
+        <br>a) none - brak dekoracji
+        <br>b) underline - podkreślenie
+        <br>c) overline - nadkreślenie
+        <br>d) line-through - przekreślenie
+        <br>e) blink - migotanie (niezalecane)
+    </p>
+    
+    <h1>8. Warianty czcionek</h1>
+    <p style="font-family: Arial;">
+        Warianty czcionek określa się za pomocą właściwości font-variant. Główna wartość to small-caps, która zamienia małe litery na kapitaliki mniejsze niż zwykłe wielkie litery.
+    </p>
+    
+    <h1>9. Pogrubienie czcionek (wyliczenia)</h1>
+    <p style="font-family: Arial;">
+        Pogrubienie czcionek określa się za pomocą właściwości font-weight. Możliwe wartości:
+        <ul>
+            <li>normal - normalna grubość (odpowiednik 400)</li>
+            <li>bold - pogrubienie (odpowiednik 700)</li>
+            <li>bolder - grubsza niż rodzic</li>
+            <li>lighter - cieńsza niż rodzic</li>
+            <li>100-900 - wartości numeryczne (100 najcieńsza, 900 najgrubsza)</li>
+        </ul>
+    </p>
+    
+    <h1>10. Rozmiar czcionek (wyliczenia)</h1>
+    <p style="font-family: Arial;">
+        Rozmiar czcionek określa się za pomocą właściwości font-size. Jednostki:
+        <ul>
+            <li>px - piksele (bezwzględne)</li>
+            <li>pt - punkty (1pt = 1/72 cala)</li>
+            <li>em - względne względem rozmiaru czcionki rodzica</li>
+            <li>rem - względne względem rozmiaru czcionki root</li>
+            <li>% - procenty względem rozmiaru czcionki rodzica</li>
+            <li>vw, vh - względne względem szerokości/wysokości viewportu</li>
+            <li>cm, mm, in - jednostki fizyczne</li>
+        </ul>
+    </p>
+    
+    <h1>11. Transformacja tekstu (składnia, opis, podkreślenia)</h1>
+    <p style="font-family: Arial;">
+        Transformacja tekstu określa się za pomocą właściwości text-transform. Możliwe wartości:
+        <br><u>none</u> - brak transformacji (domyślne)
+        <br><u>uppercase</u> - wszystkie litery wielkie
+        <br><u>lowercase</u> - wszystkie litery małe
+        <br><u>capitalize</u> - pierwsza litera każdego słowa wielka
+    </p>
+    
+    <h1>12. Wcięcia tekstu (składnia, jednostki miar)</h1>
+    <p style="font-family: Arial;">
+        Wcięcia tekstu określa się za pomocą właściwości text-indent. Składnia: text-indent: wartość;. Jednostki miar: px, em, rem, %, cm, mm, pt, in.
+    </p>
+    
+    <h1>13. Odstęp między wierszami</h1>
+    <p style="font-family: Arial;">
+        Odstęp między wierszami określa się za pomocą właściwości line-height. Można podać wartość bez jednostki (wielokrotność rozmiaru czcionki), lub z jednostkami (px, em, %).
+    </p>
+    
+    <h1>14. Odstęp między wyrazami</h1>
+    <p style="font-family: Arial;">
+        Odstęp między wyrazami określa się za pomocą właściwości word-spacing. Jednostki: px, em, rem, %, cm, mm.
+    </p>
+    
+    <h1>15. Odstęp między literami</h1>
+    <p style="font-family: Arial;">
+        Odstęp między literami określa się za pomocą właściwości letter-spacing. Jednostki: px, em, rem, %, cm, mm.
+    </p>
+    
+    <h1>16. Łączenie właściwości czcionek i tekstu</h1>
+    <p style="font-family: Arial;">
+        Właściwości czcionek i tekstu można łączyć za pomocą skróconej właściwości font, która łączy font-style, font-variant, font-weight, font-size/line-height i font-family. Przykład: font: italic bold 16px/1.5 Arial, sans-serif;
+    </p>
+
+</body>
+</html>
+<!-- Konrad Jankowski -->
