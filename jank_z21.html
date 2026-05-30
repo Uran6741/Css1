@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 21 - Konrad Jankowski</title>
+  <title>Konrad Jankowski - Zadanie 21</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style type="text/css">
+    body { font-family: Arial, sans-serif; font-size: 16px; margin: 30px; }
+    h1 { color: #003366; }
+    table { border-collapse: collapse; width: 100%; font-family: Arial, sans-serif; }
+    th { background-color: #003366; color: white; padding: 10px; text-align: left; }
+    td { border: 1px solid #aaa; padding: 10px; vertical-align: top; }
+    tr:nth-child(even) { background-color: #f0f6ff; }
+    .pojecie { font-weight: bold; width: 30%; }
+  </style>
 </head>
 <body>
-    <h1>Zadanie 21 - Użycie ID</h1>
-    
-    <h2>Tabela pojęć związanych z ID</h2>
-    
-    <table border="1" cellpadding="10" cellspacing="0">
-        <tr>
-            <th><strong>Pojęcie</strong></th>
-            <th><strong>Znaczenie pojęcia - uzupełnia uczeń</strong></th>
-        </tr>
-        <tr>
-            <td>Co znaczy skrót ID?</td>
-            <td>ID pochodzi od angielskiego słowa "Identifier" i oznacza identyfikator. Jest to unikalny atrybut używany do jednoznacznego oznaczenia elementu w dokumencie HTML.</td>
-        </tr>
-        <tr>
-            <td>Jaki jest cel stosowania ID?</td>
-            <td>Celem stosowania ID jest możliwość odwołania się do konkretnego, unikalnego elementu w dokumencie za pomocą CSS lub JavaScript. Pozwala to na precyzyjne formatowanie wybranego elementu.</td>
-        </tr>
-        <tr>
-            <td>Jakie jest znaczenie znaku #?</td>
-            <td>Znak # (hash) w CSS służy do oznaczenia selektora ID. Jest używany przed nazwą identyfikatora, aby wskazać, że odnosimy się do elementu z określonym atrybutem id.</td>
-        </tr>
-        <tr>
-            <td>Jak następuje wywołanie ID (wraz z wytłumaczeniem)?</td>
-            <td>Wywołanie ID następuje przez użycie znaku # przed nazwą identyfikatora w arkuszu stylów CSS, np. #mojeID { color: red; }. W HTML element otrzymuje atrybut id="mojeID". Selektor #mojeID odnosi się do tego konkretnego elementu.</td>
-        </tr>
-        <tr>
-            <td>Uwagi na temat stosowania ID (trzy konieczne wyliczenia)</td>
-            <td>
-                <ol>
-                    <li>ID musi być unikalne w całym dokumencie HTML - nie może być dwóch elementów z tym samym identyfikatorem.</li>
-                    <li>Nazwa ID powinna zaczynać się od litery (nie od cyfry lub znaku specjalnego).</li>
-                    <li>ID jest wrażliwe na wielkość liter - "MojeID" i "mojeid" są różnymi identyfikatorami.</li>
-                </ol>
-            </td>
-        </tr>
-    </table>
-
+ 
+<h1>Zadanie 21 – Identyfikatory ID w CSS</h1>
+ 
+<table>
+  <tr>
+    <th>Pojęcie</th>
+    <th>Znaczenie pojęcia</th>
+  </tr>
+  <tr>
+    <td class="pojecie">Co znaczy skrót ID?</td>
+    <td>
+      ID pochodzi od angielskiego słowa <em>identifier</em>, co oznacza <strong>identyfikator</strong>.
+      Jest to unikalny atrybut HTML pozwalający jednoznacznie zidentyfikować dany element na stronie.
+    </td>
+  </tr>
+  <tr>
+    <td class="pojecie">Jaki jest cel stosowania ID?</td>
+    <td>
+      Celem stosowania ID jest <strong>zróżnicowanie podobnych elementów</strong> na stronie.
+      Dzięki identyfikatorowi możemy przypisać specyficzne formatowanie CSS do konkretnego,
+      pojedynczego elementu, odróżniając go od pozostałych elementów tego samego typu.
+    </td>
+  </tr>
+  <tr>
+    <td class="pojecie">Jakie jest znaczenie znaku # ?</td>
+    <td>
+      Znak <strong>#</strong> jest stosowany w CSS jako <strong>prefix przed nazwą identyfikatora</strong>.
+      Oznacza on, że poniższa reguła dotyczy elementu o określonym atrybucie <code>id</code>.
+      Przykład: <code>#pochyly { font-style: italic; }</code>
+    </td>
+  </tr>
+  <tr>
+    <td class="pojecie">Jak następuje wywołanie ID (wraz z wytłumaczeniem)?</td>
+    <td>
+      Wywołanie identyfikatora składa się z dwóch kroków:<br /><br />
+      <strong>1) Definicja w CSS:</strong> Odpowiedni wpis składa się z selektora, do którego planujemy przypisać identyfikator, oraz z nazwy poprzedzonej znakiem #.<br />
+      Przykład: <code>p#pochyly { font-style: italic; font-size: 20pt; }</code><br /><br />
+      <strong>2) Użycie w HTML:</strong> W kodzie HTML do danego elementu dodajemy atrybut <code>id</code> z nazwą zdefiniowaną w CSS.<br />
+      Przykład: <code>&lt;p id="pochyly"&gt;Tekst pochyły&lt;/p&gt;</code>
+    </td>
+  </tr>
+  <tr>
+    <td class="pojecie">Uwagi na temat stosowania ID (trzy)</td>
+    <td>
+      <ol>
+        <li>
+          <strong>Różnica między id a class:</strong> Identyfikator może wystąpić tylko raz w całym dokumencie,
+          natomiast klasę można powielać do woli.
+        </li>
+        <li>
+          <strong>Działanie błędu:</strong> Podobnie jak klasy, identyfikatorów możemy używać tyle razy,
+          ile razy uznamy to za konieczne. Działanie takie jest błędem, ale nie wpływa na poprawność działania strony.
+        </li>
+        <li>
+          <strong>Unikalność elementów:</strong> Elementy oznaczone ID muszą być unikatowe, tzn., że na jednej stronie
+          może wystąpić tylko 1 element z takim ID. Jeśli nie mamy pewności, czy element wystąpi więcej niż raz,
+          można bez obaw użyć atrybutu <code>class</code>, które może być przypisane do nieskończenie wielu elementów.
+        </li>
+      </ol>
+    </td>
+  </tr>
+</table>
+ 
 </body>
 </html>
 <!-- Konrad Jankowski -->
