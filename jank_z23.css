@@ -1,0 +1,48 @@
+/* Zewnętrzny arkusz styli - Konrad Jankowski - Zadanie 23 */
+/* Dane: dzien urodzenia=16, miesiac=2, liczba liter nazwiska "jankowski"=9 */
+ 
+/* 1. p#pogrubienie - wielkosc: 25+9=34px, kolor: rgb(141,59,202) = #8D3BCA */
+p#pogrubienie_jankowski {
+  font-size: 34px;
+  color: #8D3BCA;
+  font-weight: bold;
+}
+ 
+/* 2. p#pochylona - wielkosc: 30+9=39pt, kolor: rgb(241,159,102) = #F19F66 */
+p#pochylona_jankowski {
+  font-size: 39pt;
+  color: #F19F66;
+  font-style: italic;
+}
+ 
+/* 3. p#index_gorny - wielkosc: 0.5+0.1*9=1.4cm, kolor: rgb(161,109,22) = #A16D16 */
+p#index_gorny_jankowski {
+  font-size: 1.4cm;
+  color: #A16D16;
+}
+ 
+/* 4. p#index_dolny - wielkosc: 0.5+0.2*9=2.3cm, kolor: rgb(24%,82%,87%) */
+p#index_dolny_jankowski {
+  font-size: 2.3cm;
+  color: rgb(24%, 82%, 87%);
+}
+ 
+/* 5. p#mono - wielkosc: 35+9=44px, kolor: rgb(33,189,102) = #21BD66 */
+p#mono_jankowski {
+  font-size: 44px;
+  color: #21BD66;
+  font-family: 'Courier New', monospace;
+}
+ 
+/* 6. p#powiekszenie - kolor: rgb(91,29,152) = #5B1D98 */
+p#powiekszenie_jankowski {
+  font-size: larger;
+  color: #5B1D98;
+}
+ 
+/* 7. p#pomniejszenie - kolor: rgb(75%,51%,20%) */
+p#pomniejszenie_jankowski {
+  font-size: smaller;
+  color: rgb(75%, 51%, 20%);
+}
+ 

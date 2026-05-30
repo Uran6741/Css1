@@ -1,0 +1,22 @@
+/* Zewnętrzny arkusz styli - Konrad Jankowski - Zadanie 22 */
+ 
+/* a) Akapit standardowy - kolor czerwony, 22pt */
+p {
+  color: red;
+  font-size: 22pt;
+}
+ 
+/* b) Akapit z ID #gruby - kolor zielony, 17pt, pogrubiony */
+p#gruby_jankowski {
+  color: green;
+  font-size: 17pt;
+  font-weight: bold;
+}
+ 
+/* c) Identyfikator uniwersalny #dlawszystkich - kolor żółty, 10pt, Arial */
+#dlawszystkich_jankowski {
+  color: yellow;
+  font-size: 10pt;
+  font-family: Arial, sans-serif;
+}
+ 
