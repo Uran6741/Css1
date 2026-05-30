@@ -1,137 +1,272 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 24 - Konrad Jankowski</title>
+  <title>Konrad Jankowski - Zadanie 24</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style type="text/css">
+    body { font-family: Arial, sans-serif; font-size: 16px; margin: 40px; }
+    h1 { font-family: Arial, sans-serif; color: #003366; border-bottom: 2px solid #003366; padding-bottom: 5px; }
+    .odpowiedz { font-family: Arial, sans-serif; font-size: 16px; }
+    code { background-color: #eef; padding: 1px 4px; border-radius: 3px; font-size: 14px; }
+    li { margin-bottom: 4px; }
+  </style>
 </head>
 <body>
-    <h1>Zadanie 24 - Właściwości czcionek - teoria</h1>
-    
-    <h1>1. Jakie standardowo dostępne są czcionki w systemie Windows?</h1>
-    <p style="font-family: Arial;">
-        <ul type="square">
-            <li>Arial</li>
-            <li>Times New Roman</li>
-            <li>Courier New</li>
-        </ul>
-    </p>
-    
-    <h1>2. Jakich czcionek dodatkowo dostarcza Internet Explorer?</h1>
-    <p style="font-family: Arial;">
-        <ol type="circle">
-            <li>Verdana</li>
-            <li>Georgia</li>
-            <li>Tahoma</li>
-            <li>Trebuchet MS</li>
-        </ol>
-    </p>
-    
-    <h1>3. Wymień rodziny ogólne</h1>
-    <p style="font-family: Arial;">
-        <ul style="list-style-type: disc; text-decoration: underline;">
-            <li><strong>serif</strong> - czcionki szeryfowe, np. Times New Roman, Georgia</li>
-            <li><strong>sans-serif</strong> - czcionki bezszeryfowe, np. Arial, Verdana</li>
-            <li><strong>monospace</strong> - czcionki o stałej szerokości, np. Courier New, Consolas</li>
-            <li><strong>cursive</strong> - czcionki pisane, np. Comic Sans MS</li>
-            <li><strong>fantasy</strong> - czcionki dekoracyjne, np. Impact</li>
-        </ul>
-    </p>
-    
-    <h1>4. Kiedy stosujemy rodziny czcionek, w jaki sposób wpisujemy (deklarujemy rodziny czcionek)?</h1>
-    <p style="font-family: Arial;">
-        Rodziny czcionek stosujemy, gdy chcemy określić preferowany styl czcionki dla elementu. Deklarujemy je za pomocą właściwości font-family w CSS. Możemy podać kilka nazw czcionek oddzielonych przecinkami - przeglądarka użyje pierwszej dostępnej. Na końcu zawsze podajemy rodzinę ogólną jako fallback.
-    </p>
-    
-    <h1>5. Rodzaje wyrównania tekstu</h1>
-    <p style="font-family: Arial;">
-        <ul>
-            <li>left - wyrównanie do lewej</li>
-            <li>right - wyrównanie do prawej</li>
-            <li>center - centrowanie</li>
-            <li>justify - justowanie (wyrównanie do obu marginesów)</li>
-        </ul>
-    </p>
-    
-    <h1>6. Kolor tekstu (składnia opis)</h1>
-    <p style="font-family: Arial;">
-        Kolor tekstu określamy za pomocą właściwości color w CSS. Można używać różnych formatów: nazwy kolorów (red, blue), kodów szesnastkowych (#FF0000), RGB (rgb(255, 0, 0)), RGBA (rgba(255, 0, 0, 0.5)), HSL, HSLA.
-    </p>
-    
-    <h1>7. Dekoracja tekstu (składnia, opis, odpowiednie wcięcia, podkreślenia numerowania)</h1>
-    <p style="font-family: Arial;">
-        Dekoracja tekstu określa się za pomocą właściwości text-decoration. Możliwe wartości:
-        <br>a) none - brak dekoracji
-        <br>b) underline - podkreślenie
-        <br>c) overline - nadkreślenie
-        <br>d) line-through - przekreślenie
-        <br>e) blink - migotanie (niezalecane)
-    </p>
-    
-    <h1>8. Warianty czcionek</h1>
-    <p style="font-family: Arial;">
-        Warianty czcionek określa się za pomocą właściwości font-variant. Główna wartość to small-caps, która zamienia małe litery na kapitaliki mniejsze niż zwykłe wielkie litery.
-    </p>
-    
-    <h1>9. Pogrubienie czcionek (wyliczenia)</h1>
-    <p style="font-family: Arial;">
-        Pogrubienie czcionek określa się za pomocą właściwości font-weight. Możliwe wartości:
-        <ul>
-            <li>normal - normalna grubość (odpowiednik 400)</li>
-            <li>bold - pogrubienie (odpowiednik 700)</li>
-            <li>bolder - grubsza niż rodzic</li>
-            <li>lighter - cieńsza niż rodzic</li>
-            <li>100-900 - wartości numeryczne (100 najcieńsza, 900 najgrubsza)</li>
-        </ul>
-    </p>
-    
-    <h1>10. Rozmiar czcionek (wyliczenia)</h1>
-    <p style="font-family: Arial;">
-        Rozmiar czcionek określa się za pomocą właściwości font-size. Jednostki:
-        <ul>
-            <li>px - piksele (bezwzględne)</li>
-            <li>pt - punkty (1pt = 1/72 cala)</li>
-            <li>em - względne względem rozmiaru czcionki rodzica</li>
-            <li>rem - względne względem rozmiaru czcionki root</li>
-            <li>% - procenty względem rozmiaru czcionki rodzica</li>
-            <li>vw, vh - względne względem szerokości/wysokości viewportu</li>
-            <li>cm, mm, in - jednostki fizyczne</li>
-        </ul>
-    </p>
-    
-    <h1>11. Transformacja tekstu (składnia, opis, podkreślenia)</h1>
-    <p style="font-family: Arial;">
-        Transformacja tekstu określa się za pomocą właściwości text-transform. Możliwe wartości:
-        <br><u>none</u> - brak transformacji (domyślne)
-        <br><u>uppercase</u> - wszystkie litery wielkie
-        <br><u>lowercase</u> - wszystkie litery małe
-        <br><u>capitalize</u> - pierwsza litera każdego słowa wielka
-    </p>
-    
-    <h1>12. Wcięcia tekstu (składnia, jednostki miar)</h1>
-    <p style="font-family: Arial;">
-        Wcięcia tekstu określa się za pomocą właściwości text-indent. Składnia: text-indent: wartość;. Jednostki miar: px, em, rem, %, cm, mm, pt, in.
-    </p>
-    
-    <h1>13. Odstęp między wierszami</h1>
-    <p style="font-family: Arial;">
-        Odstęp między wierszami określa się za pomocą właściwości line-height. Można podać wartość bez jednostki (wielokrotność rozmiaru czcionki), lub z jednostkami (px, em, %).
-    </p>
-    
-    <h1>14. Odstęp między wyrazami</h1>
-    <p style="font-family: Arial;">
-        Odstęp między wyrazami określa się za pomocą właściwości word-spacing. Jednostki: px, em, rem, %, cm, mm.
-    </p>
-    
-    <h1>15. Odstęp między literami</h1>
-    <p style="font-family: Arial;">
-        Odstęp między literami określa się za pomocą właściwości letter-spacing. Jednostki: px, em, rem, %, cm, mm.
-    </p>
-    
-    <h1>16. Łączenie właściwości czcionek i tekstu</h1>
-    <p style="font-family: Arial;">
-        Właściwości czcionek i tekstu można łączyć za pomocą skróconej właściwości font, która łączy font-style, font-variant, font-weight, font-size/line-height i font-family. Przykład: font: italic bold 16px/1.5 Arial, sans-serif;
-    </p>
-
+ 
+<ol>
+ 
+<!-- PYTANIE 1 -->
+<li>
+<h1>1. Jakie standardowo dostępne są czcionki w systemie Windows?</h1>
+<div class="odpowiedz">
+  W systemie Windows standardowo dostępne powinny być czcionki:
+  <ul type="square">
+    <li>Times New Roman (szeryfowa)</li>
+    <li>Arial (bezszeryfowa)</li>
+    <li>Courier New (monotypiczna)</li>
+  </ul>
+</div>
+</li>
+ 
+<!-- PYTANIE 2 -->
+<li>
+<h1>2. Jakich czcionek dodatkowo dostarcza Internet Explorer?</h1>
+<div class="odpowiedz">
+  Dodatkowo z Internet Explorerem dostarczane są:
+  <ul type="circle">
+    <li>Verdana</li>
+    <li>Tahoma</li>
+    <li>Trebuchet MS</li>
+    <li>Georgia</li>
+  </ul>
+</div>
+</li>
+ 
+<!-- PYTANIE 3 -->
+<li>
+<h1>3. Wymień rodziny ogólne czcionek (pięć)</h1>
+<div class="odpowiedz">
+  Rodziny ogólne czcionek:
+  <ul type="disc">
+    <li><u>serif</u> – czcionka szeryfowa (końcówki znaków posiadają „ozdobniki"). Przykłady: Times New Roman, Georgia, Garamond, Bodoni.</li>
+    <li><u>sans-serif</u> – czcionka bezszeryfowa (końcówki znaków są proste). Przykłady: Arial, Verdana, Trebuchet MS, Helvetica.</li>
+    <li><u>monospace</u> – czcionka o stałej szerokości znaków – monotypiczna (wygląda jak pisana na maszynie). Przykłady: Courier, Courier New.</li>
+    <li><u>cursive</u> – czcionka mająca pewne cechy pochyłej (wygląda jak pisana ręcznie).</li>
+    <li><u>fantasy</u> – czcionka fantazyjna (dekoracyjna).</li>
+  </ul>
+</div>
+</li>
+ 
+<!-- PYTANIE 4 -->
+<li>
+<h1>4. Kiedy i jak stosujemy rodziny czcionek?</h1>
+<div class="odpowiedz">
+  Rodziny ogólne wykorzystuje się jako ostatnią alternatywę – jeśli użytkownik nie będzie posiadał żadnej czcionki, której nazwę wpisaliśmy wprost. Dlatego zwykle rodzinę ogólną podaje się na samym końcu listy nazw czcionek.<br /><br />
+  Sposób deklaracji:<br />
+  <code>body { font-family: Arial, Helvetica, Verdana, sans-serif; }</code><br /><br />
+  Dzięki temu nawet jeśli użytkownik nie posiada żadnej z podanych czcionek, strona zostanie wyświetlona przy użyciu czcionki podobnej do zdefiniowanych.
+</div>
+</li>
+ 
+<!-- PYTANIE 5 -->
+<li>
+<h1>5. Rodzaje wyrównania tekstu</h1>
+<div class="odpowiedz">
+  Wyrównanie tekstu (właściwość CSS: <code>text-align</code>) może być:
+  <ol>
+    <li><code>left</code> – wyrównanie do lewego marginesu (domyślnie)</li>
+    <li><code>right</code> – wyrównanie do prawego marginesu</li>
+    <li><code>center</code> – wyśrodkowanie</li>
+    <li><code>justify</code> – wyrównanie do obu marginesów jednocześnie (justowanie)</li>
+  </ol>
+  Składnia: <code>selektor { text-align: wartość; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 6 -->
+<li>
+<h1>6. Kolor tekstu</h1>
+<div class="odpowiedz">
+  Właściwość CSS odpowiedzialna za kolor tekstu to <code>color</code>.<br /><br />
+  <strong>Składnia:</strong> <code>selektor { color: kolor; }</code><br /><br />
+  Właściwość <code>color</code> odnosi się do wszystkich elementów HTML. Jako kolor podajemy definicję koloru w jednym z obsługiwanych formatów:
+  <ul>
+    <li>Nazwa koloru: <code>color: red;</code></li>
+    <li>Zapis heksadecymalny: <code>color: #FF0000;</code></li>
+    <li>Zapis RGB: <code>color: rgb(255, 0, 0);</code></li>
+  </ul>
+</div>
+</li>
+ 
+<!-- PYTANIE 7 -->
+<li>
+<h1>7. Dekoracja tekstu</h1>
+<div class="odpowiedz">
+  Tekst można „udekorować" w następujący sposób:<br /><br />
+  <strong>Składnia:</strong> <code>selektor { text-decoration: dekoracja; }</code><br /><br />
+  Wartości właściwości <code>text-decoration</code>:
+  <ol type="a">
+    <li><u>Podkreślenie</u> – <code>text-decoration: underline;</code></li>
+    <li><s>Przekreślenie</s> – <code>text-decoration: line-through;</code></li>
+    <li><span style="text-decoration: overline;">Nadkreślenie</span> – <code>text-decoration: overline;</code></li>
+    <li>Migotanie tekstu (tylko Netscape/Mozilla/Opera) – <code>text-decoration: blink;</code></li>
+    <li>Bez dekoracji – <code>text-decoration: none;</code></li>
+  </ol>
+</div>
+</li>
+ 
+<!-- PYTANIE 8 -->
+<li>
+<h1>8. Warianty czcionek</h1>
+<div class="odpowiedz">
+  Wariant czcionki kontrolowany jest właściwością <code>font-variant</code>.<br /><br />
+  <strong>Składnia:</strong> <code>selektor { font-variant: wartość; }</code><br /><br />
+  Możliwe wartości:
+  <ul>
+    <li><code>normal</code> – czcionka normalna (podstawowa)</li>
+    <li><code>small-caps</code> – kapitaliki (tekst napisany wielkimi literami, lecz czcionką o wielkości małych liter)</li>
+  </ul>
+  Przykład: <code>p { font-variant: small-caps; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 9 -->
+<li>
+<h1>9. Pogrubienie czcionek</h1>
+<div class="odpowiedz">
+  Grubość czcionki kontrolowana jest właściwością <code>font-weight</code>.<br /><br />
+  <strong>Składnia:</strong> <code>selektor { font-weight: wartość; }</code><br /><br />
+  Możliwe wartości:
+  <ul>
+    <li><code>normal</code> – czcionka normalna (podstawowa)</li>
+    <li><code>bold</code> – czcionka pogrubiona</li>
+    <li><code>bolder</code> – grubsza od bieżącej</li>
+    <li><code>lighter</code> – cieńsza od bieżącej</li>
+    <li>Wartości liczbowe: <code>100, 200, 300, 400</code> (odpowiednik normal), <code>500, 600, 700</code> (odpowiednik bold), <code>800, 900</code> – każdy następny numer wskazuje wagę czcionki przynajmniej tak samo wytłuszczonej jak poprzednia.</li>
+  </ul>
+  Uwaga: Niektóre rodziny czcionek mogą nie posiadać wszystkich dziewięciu stopni wytłuszczenia.
+</div>
+</li>
+ 
+<!-- PYTANIE 10 -->
+<li>
+<h1>10. Rozmiar czcionek</h1>
+<div class="odpowiedz">
+  Rozmiar czcionki kontrolowany jest właściwością <code>font-size</code>.<br /><br />
+  <strong>Składnia:</strong> <code>selektor { font-size: rozmiar; }</code><br /><br />
+  Możliwe wartości (słowa kluczowe):
+  <ul>
+    <li><code>xx-small</code> – najmniejsza</li>
+    <li><code>x-small</code> – mniejsza</li>
+    <li><code>small</code> – mała</li>
+    <li><code>medium</code> – średnia</li>
+    <li><code>large</code> – duża</li>
+    <li><code>x-large</code> – większa</li>
+    <li><code>xx-large</code> – największa</li>
+    <li><code>larger</code> – większa od bieżącej</li>
+    <li><code>smaller</code> – mniejsza od bieżącej</li>
+  </ul>
+  Możliwe jednostki miar:
+  <ul>
+    <li>Piksele: <code>font-size: 15px;</code></li>
+    <li>Punkty: <code>font-size: 10pt;</code></li>
+    <li>Centymetry: <code>font-size: 0.5cm;</code></li>
+    <li>Cale: <code>font-size: 0.25in;</code></li>
+    <li>Pica: <code>font-size: 1pc;</code></li>
+    <li>Em: <code>font-size: 1em;</code></li>
+    <li>Ex: <code>font-size: 2ex;</code></li>
+  </ul>
+</div>
+</li>
+ 
+<!-- PYTANIE 11 -->
+<li>
+<h1>11. Transformacja tekstu</h1>
+<div class="odpowiedz">
+  <strong>Składnia:</strong> <code>selektor { text-transform: transformacja; }</code><br /><br />
+  Właściwość odnosi się do wszystkich elementów. Możliwe wartości:
+  <ul>
+    <li><u><code>none</code></u> – bez zmian (domyślnie)</li>
+    <li><u><code>capitalize</code></u> – zamiana pierwszych liter wszystkich wyrazów na wielkie</li>
+    <li><u><code>uppercase</code></u> – zamiana wszystkich liter na wielkie</li>
+    <li><u><code>lowercase</code></u> – zamiana wszystkich liter na małe</li>
+  </ul>
+  Przykład: <code>p { text-transform: uppercase; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 12 -->
+<li>
+<h1>12. Wcięcia tekstu</h1>
+<div class="odpowiedz">
+  <strong>Składnia:</strong> <code>selektor { text-indent: wcięcie; }</code><br /><br />
+  Właściwość odnosi się do elementów blokowych. Wcięcie należy podać używając jednostek miary:
+  <ul>
+    <li>Piksele – <code>px</code></li>
+    <li>Punkty edytorskie – <code>pt</code></li>
+    <li>Wysokość litery "x" – <code>ex</code></li>
+    <li>Wysokość aktualnej czcionki – <code>em</code></li>
+    <li>Centymetry lub milimetry – <code>cm</code>, <code>mm</code></li>
+    <li>Cale – <code>in</code> (1in = 2.54cm)</li>
+    <li>Procent wielkości nadrzędnej – <code>%</code></li>
+  </ul>
+  Przykład: <code>p { text-indent: 2cm; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 13 -->
+<li>
+<h1>13. Odstęp między wierszami</h1>
+<div class="odpowiedz">
+  <strong>Składnia:</strong> <code>selektor { line-height: odstęp; }</code><br /><br />
+  Właściwość odnosi się do wszystkich elementów. Odstęp podajemy używając jednostek miar (px, pt, ex, em, cm, mm, in, %) lub wartości <code>normal</code>, która przywraca wartość domyślną.<br /><br />
+  Przykład: <code>p { line-height: 1.5cm; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 14 -->
+<li>
+<h1>14. Odstęp między wyrazami</h1>
+<div class="odpowiedz">
+  <strong>Składnia:</strong> <code>selektor { word-spacing: odstęp; }</code><br /><br />
+  Właściwość odnosi się do wszystkich elementów. Odstęp podajemy używając jednostek miar (px, pt, ex, em, cm, mm, in) lub wartości <code>normal</code>, która przywraca wartość domyślną.<br /><br />
+  Przykład: <code>p { word-spacing: 10px; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 15 -->
+<li>
+<h1>15. Odstęp między literami</h1>
+<div class="odpowiedz">
+  <strong>Składnia:</strong> <code>selektor { letter-spacing: odstęp; }</code><br /><br />
+  Właściwość odnosi się do wszystkich elementów. Odstęp podajemy używając jednostek miar (px, pt, ex, em, cm, mm, in) lub wartości <code>normal</code>, która przywraca wartość domyślną.<br /><br />
+  Przykład: <code>p { letter-spacing: 5px; }</code>
+</div>
+</li>
+ 
+<!-- PYTANIE 16 -->
+<li>
+<h1>16. Łączenie właściwości czcionek i tekstu</h1>
+<div class="odpowiedz">
+  Właściwość skrótowa <code>font</code> pozwala zebrać wszystkie atrybuty dotyczące czcionek w jednym miejscu.<br /><br />
+  <strong>Składnia:</strong> <code>selektor { font: wartości atrybutów; }</code><br /><br />
+  Prawidłowa kolejność wartości atrybutów:
+  <ol>
+    <li><code>font-style</code></li>
+    <li><code>font-variant</code></li>
+    <li><code>font-weight</code></li>
+    <li><code>font-size</code> (po tym ukośnik „/"; bezpośrednio przed <code>line-height</code>)</li>
+    <li><code>line-height</code></li>
+    <li><code>font-family</code></li>
+  </ol>
+  Przykład łączonej reguły:<br />
+  <code>p { font: italic small-caps bold 14px/1cm Arial, Helvetica, Verdana, sans-serif; }</code><br /><br />
+  Można pominąć niektóre wartości – te, które nie są określone, przyjmują wartości domyślne.
+</div>
+</li>
+ 
+</ol>
+ 
 </body>
 </html>
 <!-- Konrad Jankowski -->
